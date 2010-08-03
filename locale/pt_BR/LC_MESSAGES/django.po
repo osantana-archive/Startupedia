@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Startupedia 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-03 05:18+0000\n"
+"POT-Creation-Date: 2010-08-03 18:12+0000\n"
 "PO-Revision-Date: 2010-08-03 02:16-0300\n"
 "Last-Translator: Osvaldo Santana Neto <osantana@triveos.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
@@ -18,9 +18,106 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: main/models.py:8
+#: main/admin.py:19 main/admin.py:20
+msgid "staff"
+msgstr "equipe"
+
+#: main/admin.py:25
+msgid "investor"
+msgstr "investidor"
+
+#: main/admin.py:26
+msgid "investors"
+msgstr "investidores"
+
+#: main/admin.py:32
+msgid "competitor"
+msgstr "competidor"
+
+#: main/admin.py:33
+msgid "competitors"
+msgstr "competidores"
+
+#: main/models.py:18 main/models.py:42 main/models.py:52 main/models.py:79
+#: main/models.py:89
 msgid "name"
 msgstr "nome"
+
+#: main/models.py:19
+msgid "picture"
+msgstr "foto"
+
+#: main/models.py:22 main/models.py:59 main/models.py:96
+msgid "twitter"
+msgstr "twitter"
+
+#: main/models.py:23 main/models.py:60 main/models.py:97
+msgid "linkedin"
+msgstr "linkedin"
+
+#: main/models.py:24
+msgid "blog"
+msgstr "blog"
+
+#: main/models.py:25
+msgid "blog (feed)"
+msgstr "blog (feed)"
+
+#: main/models.py:26 main/models.py:62 main/models.py:100
+msgid "tags"
+msgstr "tags"
+
+#: main/models.py:27 main/models.py:63 main/models.py:101
+msgid "e-mail"
+msgstr "e-mail"
+
+#: main/models.py:34
+msgid "position"
+msgstr "cargo"
+
+#: main/models.py:35
+msgid "start"
+msgstr "início"
+
+#: main/models.py:36
+msgid "end"
+msgstr "término"
+
+#: main/models.py:53 main/models.py:90
+msgid "logo"
+msgstr "logotipo"
+
+#: main/models.py:56 main/models.py:93
+msgid "website"
+msgstr "website"
+
+#: main/models.py:57 main/models.py:94
+msgid "description"
+msgstr "descrição"
+
+#: main/models.py:58 main/models.py:95
+msgid "category"
+msgstr "categoria"
+
+#: main/models.py:61 main/models.py:98
+msgid "address"
+msgstr "endereço"
+
+#: main/models.py:66
+msgid "Round A"
+msgstr "Rodada A"
+
+#: main/models.py:72
+msgid "type"
+msgstr "tipo"
+
+#: main/models.py:73
+msgid "amount"
+msgstr "valor"
+
+#: main/models.py:99
+msgid "employees"
+msgstr "funcionários"
 
 #: templates/base.html:5
 msgid "Startupedia"
@@ -29,4 +126,3 @@ msgstr "Startupedia"
 #: templates/main/index.html:8
 msgid "Welcome to Startupedia!"
 msgstr "Bem-vindo ao Startupedia!"
-

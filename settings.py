@@ -69,6 +69,10 @@ ADMIN_MEDIA_PREFIX = '/media-admin/'
 SITE_ID = 1
 SECRET_KEY = 'c5lt9)e=xyz+in7np(hnc#*i+vviio)lcu!3^t_y6k+zwz#%b_'
 
+# Tagging
+# -------
+FORCE_LOWERCASE_TAGS = True
+
 
 # Security
 # ========
@@ -107,6 +111,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'tagging',
     'main',
 ]
 
