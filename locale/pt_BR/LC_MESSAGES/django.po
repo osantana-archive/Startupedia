@@ -1,0 +1,32 @@
+# Startupedia Startup Directory
+# Copyright (C) 2010 Osvaldo Santana Neto
+# This file is distributed under the same license as the Startupedia package.
+# Osvaldo Santana Neto <osantana@triveos.com>, 2010.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Startupedia 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-08-03 05:18+0000\n"
+"PO-Revision-Date: 2010-08-03 02:16-0300\n"
+"Last-Translator: Osvaldo Santana Neto <osantana@triveos.com>\n"
+"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: main/models.py:8
+msgid "name"
+msgstr "nome"
+
+#: templates/base.html:5
+msgid "Startupedia"
+msgstr "Startupedia"
+
+#: templates/main/index.html:8
+msgid "Welcome to Startupedia!"
+msgstr "Bem-vindo ao Startupedia!"
+
