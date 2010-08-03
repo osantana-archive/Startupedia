@@ -4,5 +4,3 @@ oauth
 simplejson
 django
 django-tagging
-django-nose
-django-debug-toolbar

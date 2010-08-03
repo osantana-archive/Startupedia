@@ -1,0 +1,46 @@
+DATA MODELS
+
+    * Empresa:
+        - Nome (name)
+        - logo (logo)
+        - URL (website)
+        - Descrição (description)
+        - Categoria (category FK)
+        - Twitter (twitter)
+        - Linkedin (linkedin)
+        - Endereço (address)
+        - Funcionários (employees)
+        - Tags (tags M2M)
+        - Email (email)
+
+        + Investidores;
+        + Pessoas;
+        + Competidores (empresas);
+
+    Investidor
+        Nome;
+        logo (upload);
+        URL;
+        Descrição;
+        Categoria (angel, seed, venture, Private Equity, M&A)
+        Twitter;
+        Linkedin;
+        Endereço;
+        Tags
+        Email;
+
+        + Empresas;
+        + Pessoas;
+
+    Pessoa
+        Nome;
+        Photo (upload);
+        Twitter;
+        Linkedin;
+        Blog;
+        Blog RSS;
+        tags;
+        Email;
+        + empresa atual;
+        + empresas passadas;
+

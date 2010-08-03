@@ -73,6 +73,11 @@ SECRET_KEY = 'c5lt9)e=xyz+in7np(hnc#*i+vviio)lcu!3^t_y6k+zwz#%b_'
 # -------
 FORCE_LOWERCASE_TAGS = True
 
+# Twitter
+# -------
+TWITTERAUTH_KEY = 'OH HAI'
+TWITTERAUTH_SECRET = 'OH NOES'
+
 
 # Security
 # ========
@@ -111,6 +116,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'auth',
     'tagging',
     'main',
 ]
@@ -152,4 +158,11 @@ if DEBUG:
     )
 
     INSTALLED_APPS.append("django_nose")
+
+
+if not os.environ.get("VIRTUAL_ENV", False):
+    try:
+        from production import *
+    except ImportError:
+        pass
 
