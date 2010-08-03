@@ -1,0 +1,15 @@
+.installed.cfg
+.Python
+.coverage
+.profile
+.noseids
+bin
+lib
+include
+eggs
+develop-eggs
+parts
+*.py[co]
+*.egg-info
+*.db
+*.mo
