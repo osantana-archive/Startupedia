@@ -1,0 +1,26 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block head_title %}{% trans "Online management system — Startys" %}{% endblock %}</title>
+    <!--[if lt IE 9]>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <![endif]-->
+    {% block head_content %}{% endblock %}
+    {% block head_includes %}{% endblock %}
+</head>
+<body>{% block body %}
+    <div id="wrapper">{% block wrapper %}
+        <div id="header">{% block header %}{% endblock %}
+        </div> <!-- /header -->
+        <div id="main">{% block main %}
+            <div id="content">{% block content %}{% endblock %}
+            </div> <!-- /content -->
+        {% endblock %}</div> <!-- /main -->
+
+        <div id="footer">{% block footer %}{% endblock %}
+        </div> <!-- /footer -->
+      {% endblock %}</div> <!-- /wrapper -->
+  {% endblock %}
+{% block end %}{% endblock %}</body>
+</html>
