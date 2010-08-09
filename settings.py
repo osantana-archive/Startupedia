@@ -118,6 +118,7 @@ INSTALLED_APPS = [
     'django.contrib.admindocs',
     'auth',
     'tagging',
+    'reversion',
     'main',
 ]
 

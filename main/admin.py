@@ -5,6 +5,8 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 
+from reversion.admin import VersionAdmin
+
 from main.models import Person
 from main.models import Company
 from main.models import CompanyCategory
@@ -33,7 +35,7 @@ class CompetitorsInline(admin.StackedInline):
     verbose_name_plural = _("competitors")
 
 # Person
-class PersonAdmin(admin.ModelAdmin):
+class PersonAdmin(VersionAdmin):
     list_display = (
         'name',
         'blog',
@@ -48,13 +50,13 @@ admin.site.register(Person, PersonAdmin)
 
 
 # Investor
-class InvestorCategoryAdmin(admin.ModelAdmin):
+class InvestorCategoryAdmin(VersionAdmin):
     list_display = (
         'name',
     )
 admin.site.register(InvestorCategory, InvestorCategoryAdmin)
 
-class InvestorAdmin(admin.ModelAdmin):
+class InvestorAdmin(VersionAdmin):
     list_display = (
         'name',
         'website',
@@ -69,13 +71,13 @@ admin.site.register(Investor, InvestorAdmin)
 
 
 # Company
-class CompanyCategoryAdmin(admin.ModelAdmin):
+class CompanyCategoryAdmin(VersionAdmin):
     list_display = (
         'name',
     )
 admin.site.register(CompanyCategory, CompanyCategoryAdmin)
 
-class CompanyAdmin(admin.ModelAdmin):
+class CompanyAdmin(VersionAdmin):
     list_display = (
         'name',
         'website',
