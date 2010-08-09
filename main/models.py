@@ -9,11 +9,12 @@ from tagging.fields import TagField
 
 # TODO: replace address/linkedin/twitter/email/.../ with 'N-M' contact field.
 # TODO: add a geo-tag and a versioning system
-
+# TODO: 1-N offices
+# TODO: Company<-aquisitions->Company
+# TODO: Companies<-Products/Projects
 
 
 # Person
-
 class Person(models.Model):
     name = models.CharField(verbose_name=_("name"), max_length=150)
     picture = models.ImageField(verbose_name=_("picture"), upload_to="person_picture", height_field="picture_width", width_field="picture_height", blank=True)
@@ -26,8 +27,7 @@ class Person(models.Model):
     tags = TagField(verbose_name=_("tags"), blank=True)
     email = models.EmailField(verbose_name=_("e-mail"), blank=True)
 
-
-class Staff(models.Model):
+class Staff(models.Model): # person<->company
     person = models.ForeignKey("Person")
     company = models.ForeignKey("Company")
 
@@ -37,7 +37,6 @@ class Staff(models.Model):
 
 
 # Investment
-
 class InvestorCategory(models.Model):
     name = models.CharField(verbose_name=_("name"), max_length=100)
 
@@ -65,7 +64,7 @@ class Investor(models.Model):
 INVESTMENT_TYPES = (
     ('round-a', _("Round A")),
 )
-class Investment(models.Model):
+class Investment(models.Model): # investor<-investment->company
     investor = models.ForeignKey("Investor")
     company = models.ForeignKey("Company")
 
@@ -74,7 +73,6 @@ class Investment(models.Model):
 
 
 # Company
-
 class CompanyCategory(models.Model):
     name = models.CharField(verbose_name=_("name"), max_length=100)
 
@@ -97,6 +95,7 @@ class Company(models.Model):
     linkedin = models.CharField(verbose_name=_("linkedin"), max_length=150, blank=True)
     address = models.CharField(verbose_name=_("address"), max_length=150, blank=True)
     employees = models.IntegerField(verbose_name=_("employees"), blank=True, null=True)
+    founding_date = models.DateField(verbose_name=_("founding date"), blank=True, null=True)
     tags = TagField(verbose_name=_("tags"), blank=True)
     email = models.EmailField(verbose_name=_("e-mail"), blank=True)
     competitors = models.ManyToManyField("self",
